@@ -6,7 +6,7 @@ def main():
             line = f.readline()
             if not line:
                 break
-            if line.strip():
+            elif line.strip():
                 counter += int(line)
             else:
                 elves.append(counter)
