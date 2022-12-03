@@ -38,7 +38,6 @@ def main():
 
     # Finding the badge
     badge_item_vals = []
-    badge_items = []
     three_elve_groups = list(zip(*[iter(all_items)]*3))
     for group in three_elve_groups:
         grp_rucksack_like_items = []
@@ -46,7 +45,6 @@ def main():
             if l in group[1] and l in group[2] and l not in grp_rucksack_like_items:
                 badge_item_vals.append(calc_character_value(l))
                 grp_rucksack_like_items.append(l)
-                badge_items.append(l)
 
     print("Sum of badge priorities:")
     print(sum(badge_item_vals))
