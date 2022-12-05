@@ -30,11 +30,12 @@ def main():
             idx_from = from_cargo - 1
             idx_to = to_cargo - 1
             items = columns[idx_from][:qty]
-            items.reverse()
+            items.reverse() # this is for part 2, you can comment to get part 1's answer
             for item in items:
                 columns[idx_to].insert(0, item)
             columns[idx_from] = columns[idx_from][qty:]
 
+    print("First level of cargo containers:")
     print(''.join([i[0] for i in columns]))
 
 if __name__ == "__main__":
