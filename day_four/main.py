@@ -18,24 +18,18 @@ def main():
             e1 = [int(i) for i in elf_1_assign.split("-")]
             e2 = [int(i) for i in elf_2_assign.split("-")]
 
-            # # part 1: which have full overlap
-            # if (e1[0] >= e2[0] and e1[1] <= e2[1]) or (e1[0] <= e2[0] and e1[1] >= e2[1]):
-            #     naughty_pairs.append([e1, e2])
+            if (e1[0] >= e2[0] and e1[1] <= e2[1]) or (e1[0] <= e2[0] and e1[1] >= e2[1]):
+                naughty_pairs.append([e1, e2])
 
             # part 2: which have any amount of partial overlap
 
-            print(clean_line)
             if (e1[0] <= e2[0] and e1[1] >= e2[0]) or (e2[0] <= e1[0] and e2[1] >= e1[0]):
                 extra_naughty_pairs.append([e1, e2])
-                print("is naughty")
-            else:
-                print("is NOT naughty")
 
-            print("---")
-    # print("Total overlap:")
-    # print(len(naughty_pairs))
+    print("Total overlap:")
+    print(len(naughty_pairs))
 
-    # print(extra_naughty_pairs)
+    print(extra_naughty_pairs)
     print(len(extra_naughty_pairs))
 
 if __name__ == "__main__":
