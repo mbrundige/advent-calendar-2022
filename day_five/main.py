@@ -30,6 +30,7 @@ def main():
             idx_from = from_cargo - 1
             idx_to = to_cargo - 1
             items = columns[idx_from][:qty]
+            items.reverse()
             for item in items:
                 columns[idx_to].insert(0, item)
             columns[idx_from] = columns[idx_from][qty:]
